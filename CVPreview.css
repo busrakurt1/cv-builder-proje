@@ -1,0 +1,104 @@
+/* Genel Sayfa Ayarları (Klasik Şablon) */
+.cv-container.classic-template {
+  font-family: 'Times New Roman', Times, serif; 
+  padding: 50px 70px; /* Geniş kenar boşlukları */
+  max-width: 850px; 
+  margin: 0 auto;
+  background-color: white;
+  color: #333;
+  font-size: 11pt; /* Genel yazı boyutunu küçültme */
+}
+
+/* BAŞLIK BÖLÜMÜ (Ortalama ve İnce Çizgi) */
+.cv-header.centered-header {
+  display: block;
+  text-align: center;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #000; /* İnce siyah isim altı çizgi */
+  margin-bottom: 25px;
+}
+
+.full-name {
+  font-size: 28px; 
+  font-weight: bold;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.title-role {
+    font-size: 14pt; /* Unvan */
+    margin: 3px 0 10px 0;
+    color: #555;
+    font-style: italic;
+}
+
+.contact-info-centered {
+  font-size: 10pt;
+  margin-bottom: 5px;
+  color: #444;
+}
+.contact-info-centered p {
+    margin: 0;
+}
+
+/* BÖLÜMLER */
+.cv-section {
+  margin-bottom: 20px;
+}
+
+.section-title {
+  font-size: 12pt; /* Bölüm başlığı boyutu */
+  font-weight: bold;
+  border-bottom: 1px solid #555; /* Bölüm başlığı altındaki ince çizgi */
+  padding-bottom: 3px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  color: #000;
+}
+
+/* Deneyim, Projeler, Eğitim Başlıkları */
+.item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 2px;
+}
+
+.job-title, .project-title, .university {
+  font-size: 11pt;
+  font-weight: bold;
+  margin: 0;
+}
+
+.dates {
+  font-size: 10pt;
+  font-style: italic;
+  color: #555;
+}
+
+.company, .degree-field {
+  font-size: 11pt;
+  font-style: italic;
+  margin: 2px 0 5px 0;
+}
+
+/* Açıklama Listesi */
+.description-list {
+  list-style: disc; 
+  padding-left: 20px;
+  margin-top: 5px;
+}
+
+.description-list li {
+  font-size: 10pt; /* Madde yazı boyutunu küçült */
+  margin-bottom: 3px;
+  line-height: 1.3;
+}
+
+/* Özet ve Beceriler */
+.skills-list, .summary-text-new {
+  font-size: 10pt;
+  line-height: 1.4;
+  margin-top: 5px;
+  text-align: justify;
+}

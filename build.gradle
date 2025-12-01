@@ -1,0 +1,62 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.1.0'
+    id 'io.spring.dependency-management' version '1.1.0'
+    id 'io.freefair.lombok' version '6.6.1'
+}
+
+group = 'com.cvbuilder'
+version = '1.0.0'
+sourceCompatibility = '17'
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    jjwtVersion = '0.11.5'
+}
+
+dependencies {
+    // === SPRING BOOT STARTER'ları ===
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    
+    // === VERİTABANLARI ===
+    implementation 'com.h2database:h2'  // ✅ H2 EKLENDİ
+    runtimeOnly 'org.postgresql:postgresql'
+    
+    // === JWT ===
+    implementation "io.jsonwebtoken:jjwt-api:${jjwtVersion}"
+    runtimeOnly "io.jsonwebtoken:jjwt-impl:${jjwtVersion}"
+    runtimeOnly "io.jsonwebtoken:jjwt-jackson:${jjwtVersion}"
+    
+    // === DİĞER KÜTÜPHANELER ===
+    implementation 'org.jsoup:jsoup:1.17.1'
+    implementation 'com.itextpdf:itext7-core:7.2.5'
+    
+    // === GELİŞTİRME ARAÇLARI ===
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+    
+    // === TEST ===
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.springframework.security:spring-security-test'
+    testImplementation 'org.testcontainers:junit-jupiter'
+    testImplementation 'org.testcontainers:postgresql'
+    testImplementation 'org.springframework.boot:spring-boot-testcontainers'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+bootRun {
+    systemProperties = System.properties
+}
+
+bootJar {
+    archiveFileName = 'cv-builder-backend.jar'
+    launchScript()
+}
