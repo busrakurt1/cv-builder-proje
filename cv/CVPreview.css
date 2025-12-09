@@ -1,0 +1,185 @@
+/* ===============  
+   GLOBAL CV FONT & RESET
+   =============== */
+.cv-container {
+  font-family: "Calibri", "Arial", sans-serif;
+  color: #000; /* Genel metin rengi siyah */
+  padding: 40px;
+  line-height: 1.4;
+  background: #fff;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* ===============  
+      HEADER (ORTALANMIŞ)
+   =============== */
+.cv-header {
+  text-align: center; /* Dr. Morgan tarzı ortalama */
+  margin-bottom: 20px;
+  border-bottom: 2px solid #333; /* Başlık altındaki kalın çizgi */
+  padding-bottom: 15px;
+}
+
+.full-name {
+  font-size: 22pt; /* İstediğin boyut */
+  font-weight: 700;
+  margin: 0 0 5px 0;
+  text-transform: capitalize;
+}
+
+.title-role {
+  font-size: 14pt;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.contact-info {
+  font-size: 11pt; /* İdeal okunabilirlik */
+  margin-bottom: 5px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center; /* Linkleri ortala */
+  gap: 15px;
+  font-size: 11pt;
+}
+
+.social-item a {
+  color: #000;
+  text-decoration: none;
+}
+
+/* ===============  
+   SECTION TITLES
+   =============== */
+.section-title {
+  font-size: 14pt; /* İstediğin başlık boyutu */
+  font-weight: 700;
+  text-transform: uppercase; /* Resimdeki gibi büyük harf */
+  margin-top: 25px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #000; /* Alt çizgi */
+  padding-bottom: 2px;
+  letter-spacing: 0.5px;
+}
+
+.section-content {
+  margin-top: 10px;
+}
+
+/* ===============  
+   EXPERIENCE / PROJECT / EDUCATION ITEMS
+   =============== */
+.experience-item,
+.education-item,
+.project-item {
+  margin-bottom: 15px;
+}
+
+/* Tek satırda Sol ve Sağ hizalama için Flex yapısı */
+.row-space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 100%;
+}
+
+.job-title, 
+.degree, 
+.project-title {
+  font-size: 12pt; /* Gövdeden bir tık büyük */
+  font-weight: 700;
+  color: #000;
+}
+
+.dates, 
+.education-dates, 
+.project-dates {
+  font-size: 11pt;
+  font-weight: 600; /* Tarihler belirgin olsun */
+  text-align: right;
+  min-width: 120px; /* Hizalamayı korur */
+}
+
+.company-info, 
+.university {
+  font-size: 11pt;
+  font-style: italic; /* Resimdeki gibi italik kurum isimleri */
+  margin-bottom: 4px;
+}
+
+.location {
+  font-size: 11pt;
+  text-align: right;
+}
+
+/* ===============  
+   LISTS & DESCRIPTIONS
+   =============== */
+.responsibilities, 
+.project-description-list {
+  margin: 5px 0 0 0;
+  padding-left: 18px;
+}
+
+.responsibilities li,
+.project-description-list li {
+  font-size: 11pt; /* Gövde metni */
+  margin-bottom: 3px;
+  list-style-type: disc; /* Standart yuvarlak madde imi */
+}
+
+.summary-text, 
+.description {
+  font-size: 11pt;
+  text-align: justify; /* Metni iki yana yasla */
+}
+
+/* ===============
+   SKILLS & LANGUAGES (Dr. Morgan Tarzı - 3 Sütun)
+   =============== */
+.skills-grid, .languages-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 Eşit Sütun */
+  column-gap: 20px; /* Sütunlar arası boşluk */
+  row-gap: 4px;     /* Satırlar arası boşluk */
+  margin-top: 5px;
+}
+
+.skill-item, .language-item {
+  font-size: 11pt;
+  color: #000;
+  background: none; /* Arka planı kaldır */
+  border: none;     /* Çerçeveyi kaldır */
+  padding: 0;       /* İç boşluğu sıfırla */
+  text-align: left;
+  display: list-item; /* Madde imi gibi davranması için */
+  list-style-type: disc; /* Nokta koy */
+  list-style-position: inside; /* Noktayı içeri al */
+}
+
+/* Dil seviyesi metni */
+.language-level {
+  font-style: italic;
+  color: #444;
+  margin-left: 4px;
+  font-weight: normal;
+}
+
+/* ===============
+   CERTIFICATES (Experience ile aynı hiza)
+   =============== */
+.certificate-item {
+  margin-bottom: 10px;
+  /* Experience item ile aynı yapıya kavuştu */
+}
+
+/* İkinci resimdeki ortada duran "turkcell" yazısını sola almak için */
+.certificate-issuer {
+  font-size: 11pt;
+  font-style: italic;
+  color: #000;
+  text-align: left; /* Sola yasla */
+}
