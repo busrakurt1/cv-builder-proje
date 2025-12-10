@@ -1,0 +1,376 @@
+/* ===============  
+   GLOBAL CV FONT & RESET
+   =============== */
+.cv-container {
+  font-family: "Calibri", "Arial", sans-serif;
+  color: #000; /* Genel metin rengi siyah */
+  padding: 40px;
+  line-height: 1.4;
+  background: #fff;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+
+/* ===============  
+      HEADER (ORTALANMIŞ)
+   =============== */
+.cv-header {
+  text-align: center; /* Dr. Morgan tarzı ortalama */
+  margin-bottom: 20px;
+  border-bottom: 0px solid #fbfbfb; /* Başlık altındaki kalın çizgi */
+  padding-bottom: 15px;
+}
+
+.full-name {
+  font-size: 15pt; /* İsim yine vurgulu kalsın */
+  font-weight: 700;
+  margin: 0 0 5px 0;
+  text-transform: capitalize;
+}
+
+.title-role {
+  font-size: 10pt;
+  font-weight: 400;           /* ❗ Artık bold değil */
+  margin-bottom: 10px;
+  color: #000;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}
+
+.contact-info {
+  font-size: 11pt; /* İdeal okunabilirlik */
+  margin-bottom: 5px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  font-size: 11pt;
+}
+
+.social-item a {
+  color: #000;
+  text-decoration: none;
+}
+
+/* ===============  
+   SECTION TITLES (Sadece bunlar koyu)
+   =============== */
+.section-title {
+  font-size: 14pt;          /* Başlık boyutu */
+  font-weight: 555;         /* Hafif bold, çok koyu değil */
+  text-transform: uppercase;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #000;
+  padding-bottom: 2px;
+  letter-spacing: 0.5px;
+}
+
+.section-content {
+  margin-top: 10px;
+}
+
+/* ===============  
+   EXPERIENCE / PROJECT / EDUCATION ITEMS
+   =============== */
+.experience-item,
+.education-item,
+.project-item {
+  margin-bottom: 15px;
+}
+
+/* Tek satırda Sol ve Sağ hizalama için Flex yapısı */
+.row-space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 100%;
+}
+
+.job-title, 
+.degree, 
+.project-title {
+  font-size: 11pt;
+  font-weight: 400;       /* ❗ Artık bold değil */
+  color: #000;
+}
+
+.dates, 
+.education-dates, 
+.project-dates {
+  font-size: 11pt;
+  font-weight: 400;       /* ❗ Artık bold değil */
+  text-align: right;
+  min-width: 120px;
+}
+
+.company-info, 
+.university {
+  font-size: 11pt;
+  font-style: italic;
+  margin-bottom: 4px;
+}
+
+.location {
+  font-size: 11pt;
+  text-align: right;
+}
+
+/* ===============  
+   LISTS & DESCRIPTIONS
+   =============== */
+.responsibilities, 
+.project-description-list {
+  margin: 5px 0 0 0;
+  padding-left: 18px;
+}
+
+.responsibilities li,
+.project-description-list li {
+  font-size: 11pt;
+  margin-bottom: 3px;
+  list-style-type: disc !important;
+  list-style-position: outside;
+  color: #000;
+}
+
+/* Tarayıcının marker rengini netleştir */
+.responsibilities li::marker,
+.project-description-list li::marker {
+  color: #555!important;
+  font-size: 10px;
+}
+
+.summary-text, 
+.description {
+  font-size: 11pt;
+  text-align: justify;
+}
+
+/* ===============
+   SKILLS & LANGUAGES (3 sütun, nokta–yazı arası dar)
+   =============== */
+.skills-grid,
+.languages-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 10px;
+  row-gap: 4px;
+  margin-top: 5px;
+}
+
+/* ============================
+   LISTS & DESCRIPTIONS
+============================ */
+
+/* ===============
+   SKILLS & LANGUAGES 
+   =============== */
+.skills-grid,
+.languages-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 10px;
+  row-gap: 4px;
+  margin-top: 5px;
+}
+
+.skill-item,
+.language-item {
+  font-size: 11pt;
+  color: #000;         /* 🔥 YEŞİLİ SİLDİK -> SİYAH YAPTIK */
+  background: none;
+  border: none;
+  padding: 0;
+  text-align: left;
+  display: flex;       
+  align-items: flex-start;
+  margin: 2px 0;
+}
+
+/* Nokta ayarları (Aşağıdaki hizalama düzeltmesiyle çakışmaması için basit bıraktık) */
+.skill-item::before,
+.language-item::before {
+  content: "•";
+  font-size: 10pt;
+  margin-right: 6px;   /* Mesafeyi diğerleriyle eşitledik */
+  line-height: 1.2;
+  color: #555;         /* Nokta rengi gri */
+}
+
+/* Dil seviyesi metni (Beginner, Native vb.) */
+.language-level {
+  font-style: italic;
+  color: #666;         /* 🔥 MORU SİLDİK -> GRİ YAPTIK (Göz yormaz) */
+  margin-left: 4px;
+  font-weight: normal;
+}
+
+/* ===============
+   CERTIFICATES
+   =============== */
+.certificate-item {
+  margin-bottom: 10px;
+}
+
+.certificate-issuer {
+  font-size: 11pt;
+  font-style: italic;
+  color: #000;
+  text-align: left;
+}
+
+/* --- ÇİFT NOKTA SORUNU ÇÖZÜMÜ --- */
+
+/* Hem Deneyim (responsibilities) hem Projeler (project-description-list) için */
+.responsibilities li,
+.project-description-list li {
+  list-style-type: disc !important; /* Sadece standart yuvarlak siyah nokta */
+  list-style-position: outside;     /* Nokta dışarıda dursun */
+  color: #000;                      /* Yazı ve nokta rengi siyah */
+}
+
+/* Mavi rengi veya şekli oluşturan 'sahte' (before) elementleri gizle */
+.responsibilities li::before,
+.project-description-list li::before {
+  content: none !important;
+  display: none !important;
+}
+
+/* Tarayıcının kendi nokta rengini (marker) siyaha zorla */
+.responsibilities li::marker,
+.project-description-list li::marker {
+  color: #000 !important;
+  font-size: inherit; /* Nokta boyutu metinle aynı olsun */
+}
+
+/* Tarih formatı */
+.project-dates {
+  font-size: 14px;
+  font-weight: 400;
+  color: #000;
+  min-width: 150px;
+  text-align: right;
+}
+
+/* =========================
+   SUMMARY başlığı + buton hizalama
+   ========================= */
+
+/* Wrapper: başlık ve buton aynı satırda, EXPERIENCE ile aynı görünüme sahip */
+.summary-title-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  /* Başlık altındaki çizgi davranışını preserve etmek için wrapper içinde h2 kullanıyoruz */
+}
+
+/* Section title - SUMMARY için aynı stil kullanılıyor */
+/* Eğer SUMMARY başlığının altındaki çizginin biraz daha boşluklu olmasını istersen margin değerini ayarla */
+.section-title.summary {
+  margin-top: 25px;
+  margin-bottom: 6px;
+}
+
+/* Metni Değiştir butonu - küçük ve sağ üst köşeye yerleşecek */
+.summary-change-button {
+  padding: 4px 8px;
+  font-size: 9pt;              /* Küçük yazı */
+  min-width: 90px;            /* Çok dar olursa taşmasın */
+  border-radius: 6px;
+  border: 1px solid #bbb;
+  background: #f7f7f7;
+  cursor: pointer;
+  line-height: 1;
+  box-shadow: none;
+}
+
+/* Daha subtle bir görünüm (isteğe bağlı) */
+.summary-change-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(111,66,193,0.08);
+}
+
+.summary-change-button:hover {
+  background: #efefef;
+}
+
+/* Eğer butonun PDF'te görünmemesini istiyorsan (PDFService clone sırasında siler) */
+.pdf-exclude {
+  /* Bu sınıfın varlığı yeterli; görünümü değiştirmeye gerek yok */
+}
+
+
+/* ===============================
+   BULLET & TEXT HİZALAMA DÜZELTMESİ
+   (SONA EKLE) - Yapıyı bozmaz, sadece hizayı düzeltir
+   =============================== */
+
+/* Kök listelerin native padding/marker'ını devre dışı bırak */
+.responsibilities,
+.project-description-list {
+  padding-left: 0 !important;
+  list-style: none !important;
+}
+
+/* Her li'yi flex row yap, bullet alanı ve içerik hizalansın */
+.responsibilities li,
+.project-description-list li {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 0px !important;            /* bullet ile metin arası boşluk */
+  margin: 4px 0 !important;
+  padding-left: 0 !important;
+  line-height: 1.35 !important;
+  font-size: 10pt !important;     /* mevcut küçültülmüş boyutu korur */
+  color: #000 !important;
+  min-height: 1.2em;
+}
+
+/* Ortak bullet stili (projects / experience ile aynı görünüm) */
+.responsibilities li::before,
+.project-description-list li::before {
+  content: "•" !important;
+  flex: 0 0 12px !important;      /* sabit genişlik: bullet alanı */
+  display: inline-block !important;
+  font-size: 10px !important;     /* marker boyutu (projects ile eşleşecek) */
+  line-height: 1.35 !important;
+  margin-top: 3px !important;     /* dikey hizalama ince ayarı */
+  color: #555 !important;
+}
+
+/* Eğer skill-item pseudo bullet farklıysa aynı genişliğe getir */
+.skill-item,
+.language-item {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 0px !important;
+}
+
+/* skill bullets ile experience bullets aynı boyutta */
+.skill-item::before,
+.language-item::before {
+  content: "•" !important;
+  flex: 0 0 auto!important;
+  margin-right: 6px !important;
+  display: inline-block !important;
+  font-size: 10px !important;
+  line-height: 1.35 !important;
+  margin-top: 3px !important;
+  color: #555 !important;
+}
+
+/* Uzun metinler satır sardığında düzgün davranması için */
+.responsibilities li > *,
+.project-description-list li > * {
+  flex: 1 1 auto !important;
+  min-width: 0 !important;
+}
+
+/* İsteğe bağlı: marker'ı biraz yukarı/aşağı kaydırmak istersen burayı değiştir */
+/* .responsibilities li::before { transform: translateY(1px); } */

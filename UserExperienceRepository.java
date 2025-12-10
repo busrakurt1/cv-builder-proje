@@ -7,11 +7,11 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface UserSkillRepository extends JpaRepository<UserExperience, Long> {
+public interface UserExperienceRepository extends JpaRepository<UserExperience, Long> {
 
-    // Profil üzerinden tüm deneyimleri getir
+    // Profile ID üzerinden deneyimleri getir
     List<UserExperience> findByUserProfile_Id(Long profileId);
 
-    // Kullanıcı üzerinden tüm deneyimleri getir (opsiyonel)
+    // Kullanıcı ID üzerinden deneyimleri getir (opsiyonel)
     List<UserExperience> findByUserProfile_User_Id(Long userId);
 }

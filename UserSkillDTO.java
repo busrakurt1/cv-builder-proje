@@ -1,10 +1,18 @@
 package com.cvbuilder.dto;
 
-import lombok.Data;
+import lombok.*;
 
-@Data
+@Getter
+@Setter
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class UserSkillDTO {
-    private String skillName;
-    private String level;
-    private Integer experienceMonths;
+
+    private Long id;
+
+    private String category;  
+    private String skillName;            // "Java", "Spring Boot"
+    private String level;           // "BEGINNER", "INTERMEDIATE", "ADVANCED"
+    private Integer years;          // Opsiyonel: tecrübe yılı
 }
